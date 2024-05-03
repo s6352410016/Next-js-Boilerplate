@@ -34,9 +34,9 @@ const RoomItems = () => {
       responsive={responsive}
       removeArrowOnDeviceType={["tablet", "mobile"]}
     >
-      {routes.map((route, index) => (
+      {routes.map((route) => (
         <RoomAction
-          key={index}
+          key={route.label}
           icon={route.icon}
           label={route.label}
           href={route.href}

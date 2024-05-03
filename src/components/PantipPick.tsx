@@ -74,6 +74,7 @@ const PantipPick = () => {
         )}
       </div>
       <button
+        type="button"
         onClick={() => setShowPtPickItem((prev) => !prev)}
         className="h-[65px] flex gap-x-4 justify-center items-center text-white bg-[#7459c8] hover:bg-[#7a64bd] transition cursor-pointer text-lg font-medium"
       >

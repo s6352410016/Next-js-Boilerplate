@@ -8,9 +8,9 @@ const Navigation = () => {
 
   return (
     <div className="gap-x-4 max-w-[1700px] flex justify-center md:gap-x-3 mx-auto mt-5">
-      {routes.map((route, index) => (
+      {routes.map((route) => (
         <NavigationItem
-          key={index}
+          key={route.label}
           icon={route.icon}
           label={route.label}
           href={route.href}
