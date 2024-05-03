@@ -5,6 +5,11 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import { AppConfig } from '@/utils/AppConfig';
+import Header from '@/components/Header';
+import Body from '@/components/Body';
+import "@/styles/global.css";
+import Navigation from '@/components/Navigation';
+import Announce from '@/components/Announce';
 
 export const metadata: Metadata = {
   icons: [
@@ -43,12 +48,17 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <body>
+      <body className="bg-[#44416f]">
         <NextIntlClientProvider
           locale={props.params.locale}
           messages={messages}
         >
-          {props.children}
+          <Header />
+          <Navigation />
+          <Announce />
+          <Body>
+            {props.children}
+          </Body>
         </NextIntlClientProvider>
       </body>
     </html>
