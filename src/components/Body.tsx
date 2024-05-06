@@ -6,10 +6,8 @@ const Body: React.FC<BodyProps> = ({
   children
 }) => {
   return (
-    <div className="h-full">
-      <div className="max-w-[1700px] w-full mx-auto mt-5">
-        {children}
-      </div>
+    <div className="px-4 lg:px-16">
+      {children}
     </div>
   );
 }

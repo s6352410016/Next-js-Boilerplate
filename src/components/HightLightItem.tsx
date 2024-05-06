@@ -1,32 +1,32 @@
 import Image from "next/image";
 
 interface HightLightItemProps {
-  imgSrc: string;
-  content: string;
-  href: string;
+  name: string;
+  image_url: string;
+  post_url: string;
 }
 
 const HightLightItem: React.FC<HightLightItemProps> = ({
-  imgSrc,
-  content,
-  href
+  name,
+  image_url,
+  post_url
 }) => {
   return (
     <a
-      href={href}
+      href={post_url}
       target="_blank"
-      className="mx-3 rounded-lg overflow-hidden shadow-xl flex flex-col items-center bg-[#3c3963] hover:bg-[#38346b] transition cursor-pointer"
+      className="rounded-lg overflow-hidden flex flex-col cursor-pointer"
     >
       <div className="w-full min-h-52 h-full relative">
         <Image
-          src={imgSrc}
+          src={image_url}
           fill
           className="absolute"
           alt="hightlightImage"
         />
       </div>
-      <p className="p-4 font-semibold text-yellow-300 text-lg">
-        {content}
+      <p className="font-semibold text-gray-600 text-lg">
+        {name}
       </p>
     </a>
   );

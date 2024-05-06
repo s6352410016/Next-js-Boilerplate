@@ -8,10 +8,10 @@ import { AppConfig } from '@/utils/AppConfig';
 import Header from '@/components/Header';
 import Body from '@/components/Body';
 import "@/styles/global.css";
-import Navigation from '@/components/Navigation';
-import Announce from '@/components/Announce';
+import RoomItems from '@/components/RoomItems';
 
 export const metadata: Metadata = {
+  title: "AIRTIP - Welcome",
   icons: [
     {
       rel: 'apple-touch-icon',
@@ -48,14 +48,13 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <body className="bg-[#44416f]">
+      <body>
         <NextIntlClientProvider
           locale={props.params.locale}
           messages={messages}
         >
           <Header />
-          <Navigation />
-          <Announce />
+          <RoomItems />
           <Body>
             {props.children}
           </Body>

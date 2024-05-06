@@ -20,8 +20,20 @@ export default withSentryConfig(
             protocol: 'https',
             hostname: 'ptcdn.info',
             port: '',
-            pathname: '/mobile/**',
+            pathname: '/**',
           },
+          {
+            protocol: "https",
+            hostname: "f.ptcdn.info",
+            port: "",
+            pathname: "/**"
+          },
+          {
+            protocol: "http",
+            hostname: "f.ptcdn.info",
+            port: "",
+            pathname: "/**"
+          }
         ],
       },
       eslint: {
