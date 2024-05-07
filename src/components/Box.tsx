@@ -1,5 +1,5 @@
 import type { LucideProps } from "lucide-react";
-import type { ForwardRefExoticComponent, RefAttributes } from "react";
+import { type ForwardRefExoticComponent, type RefAttributes } from "react";
 
 interface BoxProps {
   children: React.ReactNode;
